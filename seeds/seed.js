@@ -1,7 +1,8 @@
 const sequelize = require('../config/connection');
-const { User } = require('../models');
+const { User, Blog } = require('../models');
 
 const userData = require('./userData.json');
+const blogData = require('./blogData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -11,7 +12,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  // for (const    ) this will be stuff for other models. see seed.js of mini project
+  for (const blogs of blogData) {
+    await Blog.create({
+      ...blogs,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
 
   process.exit(0);
 };
