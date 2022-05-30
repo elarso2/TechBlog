@@ -3,6 +3,22 @@ const req = require('express/lib/request');
 const { Blog } = require('../../models');
 const hasAuth = require('../../utils/auth');
 
+// get all route for testing purposes
+router.get('/', async (req, res) => {
+  try {
+    const blogData = await Blog
+      .findAll
+      //   {
+      //   include: [{ model: Comment }],
+      // }
+      ();
+
+    res.status(200).json(blogData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', hasAuth, async (req, res) => {
   try {
     const newBlog = await Blog.create({

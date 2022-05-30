@@ -1,6 +1,7 @@
-<html>
+<html lang='en'>
   <head>
     <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Tech Blog</title>
     <link rel='stylesheet' href='../../public/css/style.css' />
   </head>
@@ -11,10 +12,26 @@
         <h1>
           Tech Blog
         </h1>
+        <nav>
+          {{! Display profile and log out if user is logged in }}
+          {{#if logged_in}}
+            <a href='/profile'>Profile</a>
+            |
+            <button id='logout'>Log Out</button>
+            {{! otherwise, display login button }}
+          {{else}}
+            <a href='/login'>Login</a>
+          {{/if}}
+        </nav>
       </header>
+      {{! bulk content display }}
       <main class='container container-fluid mt-5'>
         {{{body}}}
       </main>
+      <footer>
+        Created by Elizabeth Larson, 2022
+      </footer>
     </div>
+
   </body>
 </html>
