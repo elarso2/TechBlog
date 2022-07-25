@@ -5,3 +5,5 @@ const hasAuth = require('../utils/auth');
 router.get('/', (req, res) => {
   res.render('../view/layouts.main');
 });
+
+module.exports = router;
