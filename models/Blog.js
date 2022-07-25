@@ -15,8 +15,9 @@ Blog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
-      type: DataTypes.STRING,
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
@@ -36,7 +37,7 @@ Blog.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'blog"',
+    modelName: 'blog',
   }
 );
 
