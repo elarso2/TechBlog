@@ -21,7 +21,30 @@
           name='blog-content'
         />
       </div>
+      <div class='form-group'>
+        <button type='submit'>Post Blog</button>
+      </div>
     </form>
   </div>
 
+  {{#if blogs.length}}
+    <div class='col-md-6 blog-list'>
+      <h3>Your Blog Posts:</h3>
+
+      {{#each blog as |blogs|}}
+        <div class='row mb-2' id='blogpost'>
+          <div class='col-md-8'>
+            <h4><a href='/blog/{{blog.id}}'>{{blog.name}}</a></h4>
+          </div>
+          <div class='col-md-4'>
+            <button class='btn btn-sm btn-danger' data-id='{{blog.id}}'>Delete
+              Post</button>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+
 </div>
+
+<script src='/public/js/profile.js'></script>
