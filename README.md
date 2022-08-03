@@ -4,6 +4,8 @@
 
 ## Description
 
+This assignment was to utitlize MVC methods to create a Tech Blog, which allows users to login, create a post, and view posts created by other users. 
+
 ## User Story
 
 ```md
@@ -20,11 +22,11 @@ The following gif, provided by our instructor, gives a depiction of the expected
 
 Some sample images of my site can be viewed below:
 
-And my site can be found by following ![this link]().
+And my site can be found by following ![this link](https://tech-blog-elarson-app.herokuapp.com/).
 
 ## Dependencies
 
-This application requires the bcrypt, connect-session-sequelize, dotenv, express, express-handlebars, express-session, mysql2, and sequelize npm packages. The eslint and eslint-config-prettier packages were used as well, but are not required for application functionality.
+This application requires the `bcrypt`, `connect-session-sequelize`, `dotenv`, `express`, `express-handlebars`, `express-session`, `mysql2`, and `sequelize` npm packages. The `eslint` and `eslint-config-prettier` packages were used as well, but are not required for application functionality.
 
 ## License
 
